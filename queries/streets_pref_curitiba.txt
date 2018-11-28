@@ -1,0 +1,9 @@
+{"QUERY":"SELECT gid AS id, nmvia AS name, ST_AsText(ST_FlipCoordinates(ST_Transform(ST_SetSRID(geom, 4326), 4326))) AS geometry FROM curitiba.eixo_rua", 
+"IS_OMS":false, 
+"IDENTIFIER": "pg",
+"DATABASE_HOST":"localhost",
+"DATABASE_PORT":"5432",
+"DATABASE_NAME":"postgis_23_sample",
+"DATABASE_USER":"postgres",
+"DATABASE_PASSWORD":"t2002b",
+"DATABASE_SCHEMA":"curitiba"}

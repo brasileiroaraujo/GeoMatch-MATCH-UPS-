@@ -1,0 +1,9 @@
+{"QUERY":"SELECT id, name, ST_AsText(ST_FlipCoordinates(geom)) AS geometry FROM new_york.osm_ny_full", 
+"IS_OMS":true, 
+"IDENTIFIER": "pg",
+"DATABASE_HOST":"localhost",
+"DATABASE_PORT":"5432",
+"DATABASE_NAME":"postgis_23_sample",
+"DATABASE_USER":"postgres",
+"DATABASE_PASSWORD":"t2002b",
+"DATABASE_SCHEMA":"new_york"}

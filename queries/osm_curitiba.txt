@@ -1,0 +1,9 @@
+{"QUERY":"SELECT id, name, ST_AsText(ST_FlipCoordinates(ST_Transform(ST_SetSRID(geom, 4326), 29192))) AS geometry FROM curitiba.full_polygon_osm_curitiba", 
+"IS_OMS":true, 
+"IDENTIFIER": "pg",
+"DATABASE_HOST":"localhost",
+"DATABASE_PORT":"5432",
+"DATABASE_NAME":"postgis_23_sample",
+"DATABASE_USER":"postgres",
+"DATABASE_PASSWORD":"t2002b",
+"DATABASE_SCHEMA":"curitiba"}

@@ -1,0 +1,9 @@
+{"QUERY":"SELECT id, name AS name, ST_AsText(ST_FlipCoordinates(geom)) AS geometry FROM los_angeles.parks_pref_la WHERE geom IS NOT NULL", 
+"IS_OMS":false, 
+"IDENTIFIER": "pg",
+"DATABASE_HOST":"localhost",
+"DATABASE_PORT":"5432",
+"DATABASE_NAME":"postgis_23_sample",
+"DATABASE_USER":"postgres",
+"DATABASE_PASSWORD":"t2002b",
+"DATABASE_SCHEMA":"los_angeles"}

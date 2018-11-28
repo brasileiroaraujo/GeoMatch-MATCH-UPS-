@@ -1,0 +1,9 @@
+{"QUERY":"SELECT gid AS id, nome AS name, ST_AsText(ST_FlipCoordinates(geom)) AS geometry FROM curitiba.squares_pref_curitiba", 
+"IS_OMS":false, 
+"IDENTIFIER": "pg",
+"DATABASE_HOST":"localhost",
+"DATABASE_PORT":"5432",
+"DATABASE_NAME":"postgis_23_sample",
+"DATABASE_USER":"postgres",
+"DATABASE_PASSWORD":"t2002b",
+"DATABASE_SCHEMA":"curitiba"}

@@ -1,0 +1,9 @@
+{"QUERY":"SELECT gid AS id, nome AS name, ST_AsText(ST_FlipCoordinates(geom)) AS geometry FROM arruamento.pracas_e_jardinetes", 
+"IS_OMS":false, 
+"IDENTIFIER": "pg",
+"DATABASE_HOST":"web.cloud.lsd.ufcg.edu.br",
+"DATABASE_PORT":"45249",
+"DATABASE_NAME":"BIGSEA",
+"DATABASE_USER":"bigsea",
+"DATABASE_PASSWORD":"b1gs34d4t4",
+"DATABASE_SCHEMA":"arruamento"}
