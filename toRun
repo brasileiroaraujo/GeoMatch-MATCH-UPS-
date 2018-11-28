@@ -1,0 +1,30 @@
+outputCSV/bustops_pref_curitiba2.csv outputCSV/bustops_osm_curitiba.csv 20 outputBusStops_OSM_Pref_CSV/ 1 CSV
+
+
+
+
+
+queries/squares_pref_curitiba.txt queries/osm_curitiba.txt 0.7 0.7 outputPracasCuritibaTESTE/ 1 (matching geopolygon)
+
+
+queries/osm_curitiba.txt 0.7 0.7 outputSingleTESTE/ 1 (single matching geopolygon)
+
+
+queries/osm_curitiba.txt 0.7 0.7 outputSingleCurPrefTESTE/ 1 (single matching geopolygon blocked)
+
+
+queries/bustops_osm_curitiba.txt 0.6 20 outputBusStops_OSM_PrefTest/ 1 (single matching bustops)
+
+
+queries/squares_pref_curitiba2.txt queries/osm_curitiba.txt 0.7 0.7 outputs/outputPracasCuritibaGISDF1.6/ 1 GIS
+
+
+outputCSV/squares_pref_curitiba.csv outputCSV/osm_curitiba.csv 0.7 0.7 outputPracasCuritibaCSV/ 1 CSV
+
+
+
+outputCSV/squares_pref_curitiba.csv outputCSV/osm_curitiba.csv 0.7 0.7 outputs/outputPracasCuritibaCSV/ 1 CSV
+
+
+queries/bustops_pref_curitiba2.txt queries/bustops_osm_curitiba.txt queries/streets_pref_curitiba.txt  4 outputs/outputBusStopsContextNew/ 1 GIS
+outputCSV/bustops_pref_curitiba3.csv outputCSV/bustops_osm_curitiba3.csv outputCSV/streets_pref_curitiba.csv 0.7 outputs/outputBusContextTocompareLemon/ 1 CSV

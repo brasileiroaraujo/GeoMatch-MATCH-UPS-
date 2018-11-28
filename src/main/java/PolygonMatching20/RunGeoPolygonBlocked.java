@@ -1,0 +1,36 @@
+package PolygonMatching20;
+
+import org.apache.spark.sql.Dataset;
+import org.apache.spark.sql.SparkSession;
+
+import PolygonDependencies.GeoPolygon;
+
+public class RunGeoPolygonBlocked {
+	//param: outputCSV/squares_pref_curitiba.csv outputCSV/osm_curitiba.csv 0.7 0.7 outputs/outputPracasCuritibaCSV10/ 1 CSV
+	//outputCSV/parks_pref_ny.csv outputCSV/osm_ny.csv 0.7 0.7 outputs/outputPracasNYCSV3/ 1 CSV
+	public static void main(String[] args) throws Exception {
+		String dataSource1 = args[0];
+		String dataSource2 = args[1];
+		double thresholdLinguistic = Double.parseDouble(args[2]);
+		double thresholdPolygon = Double.parseDouble(args[3]);
+		String outputPath = args[4];
+		Integer amountPartition = Integer.parseInt(args[5]);
+		String sourceType = args[6];
+		
+		
+//		SparkConf sparkConf = new SparkConf().setAppName("GeoMatchingSpark").setMaster("local");
+		SparkSession spark = SparkSession
+				  .builder()
+//				  .master("local")
+				  .config("spark.some.config.option", "some-value")
+				  .config("spark.sql.warehouse.dir", "file:///tmp/spark-warehouse")
+				  .getOrCreate();
+		
+		
+		MatchingGeoPolygon20Blocked mp = new MatchingGeoPolygon20Blocked();
+		Dataset<GeoPolygon> polygons = MatchingGeoPolygon20Blocked.generateDataFrames(dataSource1, dataSource2, sourceType, spark);
+		MatchingGeoPolygon20Blocked.run(polygons, thresholdLinguistic, thresholdPolygon, amountPartition, spark).javaRDD().saveAsTextFile(outputPath);
+
+	}
+
+}
