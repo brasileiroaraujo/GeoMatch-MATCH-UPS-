@@ -1,0 +1,9 @@
+{"QUERY":"SELECT COUNT(*) FROM public.employees", 
+"IS_OMS":true, 
+"IDENTIFIER": "pg",
+"DATABASE_HOST":"localhost",
+"DATABASE_PORT":"5432",
+"DATABASE_NAME":"sakila",
+"DATABASE_USER":"postgres",
+"DATABASE_PASSWORD":"123",
+"DATABASE_SCHEMA":"public"}
